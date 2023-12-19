@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "Meslo Font";
+  src:    local(meslo),
+  url("fonts/meslo.ttf") format("truetype");
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Meslo Font";
+  src:    local(meslo)
+  url("fonts/meslo.ttf") format("truetype");
+  font-stretch: normal;
+}
