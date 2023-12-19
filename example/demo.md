@@ -1,6 +1,12 @@
 ---
 title: Mikroways reveal.js theme demo
 highlightTheme: vs2015
+scripts:
+  - https://cdn.jsdelivr.net/gh/mikroways/reveal.js-mermaid-plugin@2.1.0/plugin/mermaid/mermaid.min.js
+  - https://cdn.jsdelivr.net/npm/asciinema-player@3.6.3/dist/bundle/asciinema-player.min.js
+  - example/js/script.js
+css:
+  - https://cdn.jsdelivr.net/npm/asciinema-player@3.6.3/dist/bundle/asciinema-player.min.css
 revealOptions:
   transition: 'concave'
   transitionSpeed: 'slow'
@@ -90,7 +96,7 @@ with next column
 
 # Shadows
 
----
+----
 
 ## Text with shadow
 
@@ -117,3 +123,195 @@ Nice frog with shadow
 
 </div>
 </div>
+
+---
+<!-- .slide: class="dark-logo-center" -->
+
+# Asciinema
+
+----
+## Sample
+
+<asciinema
+  cast="images/sample.cast"
+  opts-autoplay="true"
+  opts-idle-time-limit="1"
+  opts-speed="3"
+  opts-rows="24"
+  opts-terminal-font-family="'Meslo Font', monospace"
+/>
+
+
+----
+
+## Asciinema integration
+
+Configure reveal-md to use scripts and css like this:
+
+<pre>
+<code class="yaml hljs" data-line-numbers="5,6,8" >
+title: Some title
+highlightTheme: vs2015
+scripts:
+  - https://cdn.jsdelivr.net/npm/asciinema-player@3.6.3/dist/bundle/asciinema-player.min.js
+  - example/js/script.js
+css:
+  - https://cdn.jsdelivr.net/npm/asciinema-player@3.6.3/dist/bundle/asciinema-player.min.css
+...
+</code>
+</pre>
+
+> Note asciinema version  3.6.3 is used. But what is `js/script.js` ?
+
+----
+## What is js/script.js
+
+Loads asciinema on ready and when enter a slide, play asciinema if present:
+
+<pre>
+<code class="js hljs" >
+function snakeToCamel(str) {
+    return str.toLowerCase().replace(/([-_][a-z])/g, group =>
+          group
+            .toUpperCase()
+            .replace('-', '')
+            .replace('_', '')
+        );
+}
+
+function setAsciinema(event) {
+    const asciinemas = document.getElementsByTagName("asciinema");
+    for (let i=0; i < asciinemas.length; i++) {
+          let opts = {}
+          let attrs = asciinemas[i].getAttributeNames().filter(
+                  (n) => n.startsWith("opts-") );
+          for (let o=0; o < attrs.length; o++) {
+                  opts[snakeToCamel(attrs[o].replace(/^opts-/,''))] =
+                        asciinemas[i].getAttribute(attrs[o]);
+                }
+          asciinemas[i].playerObject = AsciinemaPlayer.create(
+                  asciinemas[i].getAttribute("cast"),
+                  asciinemas[i],
+                  opts
+                );
+        }
+};
+
+function playAscinema(event) {
+    const asciinemas = event.currentSlide.getElementsByTagName("asciinema");
+    for (let i=0; i < asciinemas.length; i++) {
+          if (asciinemas[i].playerObject) {
+                    asciinemas[i].playerObject.seek(0);
+                    asciinemas[i].playerObject.play();
+                }
+        }
+};
+
+
+Reveal.on('ready', setAsciinema);
+Reveal.on('slidechanged', playAscinema);
+
+</code>
+</pre>
+
+---
+<!-- .slide: class="dark-logo-center" -->
+
+# Mermaid support
+
+----
+
+## Git graphs
+
+<div class="mermaid">
+  <pre>
+    %%{init: { }}}%%
+    gitGraph
+      commit id: "Commit inicial"
+      branch develop
+      checkout develop
+      commit
+      commit
+      checkout main
+      merge develop id: "Merge"  tag: "0.1.0"
+      checkout develop
+      commit
+      commit
+  </pre>
+</div>
+
+----
+
+## Or mindmaps
+
+<div class="mermaid">
+  <pre>
+    %%{init: { }}}%%
+      mindmap
+        root((pod))
+          {{Container}}
+              Secret
+              ::icon(fa fa-key)
+              Configmap
+              ::icon(fa fa-file)
+              PersistentVolume
+              ::icon(fa fa-hdd)
+                  (PersistentVolumeClaim)
+          [Replicaset]
+            (Deployment)
+          (Statefulset)
+          (Daemonset)
+          (Job)
+            (Cronjob)
+          )Service(
+              )Ingress(
+  </pre>
+</div>
+
+----
+## Even timelines
+
+
+<div class="mermaid shadow">
+  <pre>
+    %%{init: { }}}%%
+    timeline
+      1979: chroot en Unix
+      2004: Solaris Containers
+      2005: Open VZ
+      2006: Process containers (cgroups)
+      2008: LXC
+  </pre>
+</div>
+
+> Note shadow is added
+
+----
+
+## Mermaid integration
+
+Configure reveal-md to use mermaid plugin
+
+<pre>
+<code class="yaml hljs" data-line-numbers="5,6" >
+title: Some title
+highlightTheme: vs2015
+scripts:
+  - https://cdn.jsdelivr.net/gh/mikroways/reveal.js-mermaid-plugin@2.1.0/plugin/mermaid/mermaid.min.js
+  - example/js/script.js
+...
+</code>
+</pre>
+
+> Note mermaid-plugin version 2.1.0
+
+----
+## What is js/script.js
+
+As simple as
+
+<pre>
+<code class="js hljs">
+options.plugins.push(RevealMermaid);
+</code>
+</pre>

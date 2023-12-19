@@ -228,4 +228,10 @@ $whiteLogo: 'iVBORw0KGgoAAAANSUhEUgAAAyAAAAEMCAMAAAALXyI+AAAA0GVYSWZJSSoACAAAAAo
   .small {
     font-size: 0.7em;
   }
+
+  pre code {
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  }
 }
