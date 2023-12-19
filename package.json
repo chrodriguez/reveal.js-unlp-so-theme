@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "demo": "reveal-md --watch --theme theme/mikroways.css example/demo.md",
-    "static": "reveal-md --static --theme theme/mikroways.css example/demo.md",
+    "static": "reveal-md --static --theme theme/mikroways.css example/demo.md && cp example/images/*cast _static/images/",
     "sass": "node-sass --watch theme/source/mikroways.scss theme/mikroways.css"
   },
   "repository": {
