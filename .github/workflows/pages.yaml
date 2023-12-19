@@ -14,7 +14,7 @@ jobs:
       - name: Build theme
         run: |
           npm install
-          npm run build
+          npm run static
           touch _static/.nojekyll
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
