@@ -1,0 +1,31 @@
+{
+  "name": "reveal.js-mikroways-theme",
+  "version": "1.0.0",
+  "description": "Mikroways reveal.js theme",
+  "main": "index.js",
+  "scripts": {
+    "demo": "reveal-md --watch --theme theme/mikroways.css example/demo.md",
+    "static": "reveal-md --static --theme theme/mikroways.css example/demo.md",
+    "sass": "node-sass --watch theme/source/mikroways.scss theme/mikroways.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mikroways/reveal.js-mikroways-theme.git"
+  },
+  "keywords": [
+    "reveal",
+    "js",
+    "theme",
+    "css"
+  ],
+  "author": "Christian Adrian Rodriguez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mikroways/reveal.js-mikroways-theme/issues"
+  },
+  "homepage": "https://github.com/Mikroways/reveal.js-mikroways-theme#readme",
+  "devDependencies": {
+    "node-sass": "^9.0.0",
+    "reveal-md": "^5.5.2"
+  }
+}

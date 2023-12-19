@@ -1,0 +1,25 @@
+on:
+  push:
+    branches:
+      - master
+    tags:
+      - '*'
+jobs:
+  pages:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Build theme
+        run: |
+          npm install
+          npm run build
+          touch _static/.nojekyll
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: _static
+          clean: false
