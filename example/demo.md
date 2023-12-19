@@ -86,3 +86,34 @@ with next column
 * Item 2
 </div>
 </div>
+---
+
+# Shadows
+
+---
+
+## Text with shadow
+
+<div class="shadow">
+This text has shadow. As you can see, no border is added only a background
+shadow
+</div>
+----
+
+## An image with shadow
+
+<div class="container small">
+
+<div class="col">
+
+![some image](images/frog.jpeg)<!--.element: height="400px" class="shadow" -->
+
+</div>
+<div class="col">
+
+## Title
+
+Nice frog with shadow
+
+</div>
+</div>
