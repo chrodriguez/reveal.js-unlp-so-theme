@@ -2,7 +2,7 @@
 title: Mikroways reveal.js theme demo
 highlightTheme: vs2015
 scripts:
-  - https://cdn.jsdelivr.net/gh/mikroways/reveal.js-mermaid-plugin@2.1.0/plugin/mermaid/mermaid.min.js
+  - https://cdn.jsdelivr.net/npm/reveal.js-mermaid-plugin@2.1.0/plugin/mermaid/mermaid.min.js
   - https://cdn.jsdelivr.net/npm/asciinema-player@3.6.3/dist/bundle/asciinema-player.min.js
   - example/js/script.js
 css:
@@ -297,7 +297,7 @@ Configure reveal-md to use mermaid plugin
 title: Some title
 highlightTheme: vs2015
 scripts:
-  - https://cdn.jsdelivr.net/gh/mikroways/reveal.js-mermaid-plugin@2.1.0/plugin/mermaid/mermaid.min.js
+  - https://cdn.jsdelivr.net/npm/reveal.js-mermaid-plugin@2.1.0/plugin/mermaid/mermaid.min.js
   - example/js/script.js
 ...
 </code>
