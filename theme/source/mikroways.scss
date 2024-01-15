@@ -24,7 +24,7 @@ $headingColor: #005198;
 $mainFontSize: 34px;
 $mainFont: 'Open Sans', Helvetica, sans-serif;
 $headingFont: 'Open Sans', Helvetica, sans-serif;
-$headingTextShadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+$headingTextShadow: 3px 3px 10px rgba(0, 0, 0, .5);
 $heading1TextShadow: $headingTextShadow;
 $headingLetterSpacing: normal;
 $headingTextTransform: none;
@@ -90,7 +90,7 @@ $whiteLogo: 'iVBORw0KGgoAAAANSUhEUgAAAyAAAAEMCAMAAAALXyI+AAAA0GVYSWZJSSoACAAAAAo
       background-position: left;
       position: absolute;
       width: 100%;
-      height: 15%;
+      height: 10%;
       bottom: 20px;
       left: 20px;
   }
@@ -99,7 +99,7 @@ $whiteLogo: 'iVBORw0KGgoAAAANSUhEUgAAAyAAAAEMCAMAAAALXyI+AAAA0GVYSWZJSSoACAAAAAo
   h1, h2, h3, h4 {
     text-align: right;
     color: #fff;
-    text-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, .5);
   }
 }
 // END COVER
@@ -124,7 +124,7 @@ $whiteLogo: 'iVBORw0KGgoAAAANSUhEUgAAAyAAAAEMCAMAAAALXyI+AAAA0GVYSWZJSSoACAAAAAo
 .slides section.dark-logo-center {
   h1, h2, h3, h4 {
     color: #fff;
-    text-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, .5);
   }
   a {
     color: #58bf67;
@@ -159,7 +159,7 @@ $whiteLogo: 'iVBORw0KGgoAAAANSUhEUgAAAyAAAAEMCAMAAAALXyI+AAAA0GVYSWZJSSoACAAAAAo
 .slides section.dark-logo-left {
   h1, h2, h3, h4 {
     color: #fff;
-    text-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, .5);
   }
   a {
     color: #58bf67;
@@ -218,11 +218,11 @@ $whiteLogo: 'iVBORw0KGgoAAAANSUhEUgAAAyAAAAEMCAMAAAALXyI+AAAA0GVYSWZJSSoACAAAAAo
     background: rgb(200,200,200);
     background: linear-gradient(8deg, rgba(200,200,200,1) 0%, rgba(235,235,235,1) 23%, rgba(255,255,255,1) 52%, rgba(255,255,255,1) 100%);
     font-size: 0.6em;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
   }
 
   .shadow {
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.8);
   }
 
   .small {
@@ -232,6 +232,6 @@ $whiteLogo: 'iVBORw0KGgoAAAANSUhEUgAAAyAAAAEMCAMAAAALXyI+AAAA0GVYSWZJSSoACAAAAAo
   pre code {
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
   }
 }
