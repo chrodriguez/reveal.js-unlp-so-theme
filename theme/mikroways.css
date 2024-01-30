@@ -24,19 +24,17 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   --r-heading-letter-spacing: normal;
   --r-heading-text-transform: none;
   --r-heading-text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
-  --r-heading-text-shadow-safari: 3px 3px 10px rgba(0, 0, 0, 0.2);
   --r-heading-font-weight: 600;
   --r-heading1-text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
-  --r-heading1-text-shadow-safari: 3px 3px 10px rgba(0, 0, 0, 0.2);
   --r-heading1-size: 2.5em;
   --r-heading2-size: 1.6em;
   --r-heading3-size: 1.3em;
   --r-heading4-size: 1em;
   --r-code-font: monospace;
-  --r-link-color: #005198;
-  --r-link-color-dark: #00284c;
-  --r-link-color-hover: #126ebf;
-  --r-selection-background-color: #1993ff;
+  --r-link-color: #228b3d;
+  --r-link-color-dark: #134e22;
+  --r-link-color-hover: #01661b;
+  --r-selection-background-color: #57d677;
   --r-selection-color: #fff; }
 
 .reveal-viewport {
@@ -83,16 +81,6 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   text-shadow: var(--r-heading-text-shadow);
   word-wrap: break-word; }
 
-@supports (font: -apple-system-body) and (-webkit-appearance: none) {
-  .reveal h1,
-  .reveal h2,
-  .reveal h3,
-  .reveal h4,
-  .reveal h5,
-  .reveal h6 {
-    text-shadow: var(--r-heading-text-shadow-safari); }
-}
-
 .reveal h1 {
   font-size: var(--r-heading1-size); }
 
@@ -107,11 +95,6 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 
 .reveal h1 {
   text-shadow: var(--r-heading1-text-shadow); }
-
-@supports (font: -apple-system-body) and (-webkit-appearance: none) {
-  .reveal h1 {
-    text-shadow: var(--r-heading1-text-shadow-safari); }
-}
 
 /*********************************************
  * OTHER
