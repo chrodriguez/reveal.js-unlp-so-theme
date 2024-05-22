@@ -4,9 +4,9 @@
   "description": "Mikroways reveal.js theme",
   "main": "index.js",
   "scripts": {
-    "demo": "reveal-md --watch --theme theme/mikroways.css example/demo.md",
+    "demo": "reveal-md --watch --theme theme/unlp-so.css example/demo.md",
     "static": "reveal-md --static --theme theme/mikroways.css example/demo.md && cp example/images/*cast _static/images/",
-    "sass": "node-sass --watch theme/source/mikroways.scss theme/mikroways.css"
+    "sass": "node-sass --watch theme/source/unlp-so.scss theme/unlp-so.css"
   },
   "repository": {
     "type": "git",

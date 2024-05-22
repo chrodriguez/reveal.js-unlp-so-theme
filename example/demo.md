@@ -1,6 +1,5 @@
 ---
 title: Mikroways reveal.js theme demo
-highlightTheme: vs2015
 scripts:
   - https://cdn.jsdelivr.net/npm/reveal.js-mermaid-plugin@2.1.0/plugin/mermaid/mermaid.min.js
   - https://cdn.jsdelivr.net/npm/asciinema-player@3.6.3/dist/bundle/asciinema-player.min.js
@@ -14,7 +13,7 @@ revealOptions:
 <!-- .slide: class="main-cover" data-transition="zoom" -->
 
 # reveal.js
-## Mikroways theme demo
+## Tema para la la facultad de informática de la UNLP
 
 ---
 <!-- .slide: class="dark-logo-left" -->
@@ -84,7 +83,7 @@ This is a text inside column 1. As you can see, text flows but don't overlaps
 with next column
 </div>
 
-<div class="col">
+<div class="col small">
 
 ### Column 2
 
